@@ -13,7 +13,7 @@
 
 # Introduction
 ##### Project by Kevin villalba.
- This web application ([Sabrium](https://sabrium.netlify.app)) is built entirely with [React.js](https://reactjs.org), it is a fast food e-commerce app with simple styles and structure, based on a personal idea. The app uses Firebase database for storage products, user data, and purchase details. 
+ This web application ([Sabrium](https://sabrium.netlify.app)) is built entirely with [React.js](https://reactjs.org), it is a fast food e-commerce app with simple styles and structure, based on a personal idea. The app uses Firebase to storage products, user data, and purchase details. 
 
 # Application info
 The application consists of a routing with 5 routes
