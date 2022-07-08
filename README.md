@@ -6,7 +6,6 @@
 | ------ | ------ | ------ |
 | React.js | v18.1.0 | https://reactjs.org/ |
 | React Router | v6.3.0 | https://reactrouter.com/ |
-| npm | v8.10.0 | https://www.npmjs.com/ |
 | Firebase | v9.8.4 | https://firebase.google.com/ |
 | Bootstrap | v5.1.3 | https://getbootstrap.com/ |
 | React FontAwesome | v1.7.1 | https://fontawesome.com/ |
