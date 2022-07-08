@@ -21,7 +21,7 @@ The application consists of a routing with 5 routes
 - [Category](http://sabrium.netlify.app/categoria/pizzas): this shows the products filtered by category.
 - [Detail](https://sabrium.netlify.app/detalle/1xtNhb9ZDdPbeSBBuGb0): this shows individual product detail.
 - [Cart](https://sabrium.netlify.app/carrito): Shows the products that the user is going to buy.
-- [Verification](https://sabrium.netlify.app/verificacion): This is to request the user data for the purchase. And also after requesting them, show the details of the purchase.
+- Verification: This is to request the user data for the purchase. And also after requesting them, show the details of the purchase.
 
 The hooks I am using in the app:
 - [useState](https://es.reactjs.org/docs/hooks-reference.html#usestate)
