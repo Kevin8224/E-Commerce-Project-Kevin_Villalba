@@ -1,0 +1,106 @@
+
+/* Confirmation Buttons when user select prod quantity */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    height: 210px;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.btn-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 400px;
+    position: relative;
+}
+
+.go-back {
+    height: 44px;
+    width: 60px;
+    position: absolute;
+    top: 27px;
+    left: -17px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+.go-back:hover {
+    background-color: #00000020;
+}
+
+.links,
+.links:hover,
+.links:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 140px;
+    border: none;
+    background-color: rgb(36, 147, 199);
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 1px #00000050;
+    transition: all 0.14s;
+}
+
+.btn-to-cart:hover {
+    background-color: rgb(55, 183, 222);
+}
+
+.btn-to-cart:active {
+    background-color: rgb(29, 74, 181);
+}
+
+.buy-another {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    border: none;
+    background-color: rgb(24, 212, 84);
+    color: #fff;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 1px #00000050;
+    transition: all 0.14s;
+}
+
+.buy-another:hover {
+    background-color: rgb(21, 230, 146);
+}
+
+.buy-another:active {
+    background-color: rgb(21, 164, 13);
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+    .btn-flex-container {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .go-back {
+        top: -14px;
+        left: -45px;
+    }
+
+    .btn-to-cart, .buy-another {
+        width: 220px;
+        margin-bottom: 20px;
+    }
+}

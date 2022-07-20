@@ -1,0 +1,100 @@
+
+/* Select Prod quantity card */
+.countCard {
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 6px 10px 7px #00000030;
+    border-radius: 15px;
+}
+
+.foodName {
+    text-align: center;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+
+.actions {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 30px;
+    background-color: rgb(17, 179, 207);
+    border-radius: 50%;
+    font-size: 32px;
+    padding-bottom: 5px;
+    color: #fff;
+    border: none;
+    transform: translate(0px, 1px);
+    transition: background-color 0.3s, box-shadow 0.07s;
+}
+
+.actions:active {
+    background-color: rgb(17, 109, 255);
+    box-shadow: 0px 0px 0px 6px #00000040;
+}
+
+.productQuantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgb(225, 225, 225);
+    color: #000;
+}
+
+.onAdd:focus {
+    outline: none;
+}
+
+.addToCart {
+    height: 37px;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid rgb(17, 141, 207);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.addToCart:hover {
+    background-color: rgb(17, 179, 207);
+    border: 2px solid rgb(17, 179, 207);
+    color: #fff;
+}
+
+.addToCart:active {
+    background-color: rgb(17, 141, 207);
+    box-shadow: 0px 0px 1px 10px rgba(15, 120, 177, 0.11);
+    color: #fff;
+}
+
+/* Responsive */
+@media only screen and (max-width: 720px) {
+    .addToCart {
+        background-color: rgb(17, 179, 207);
+        color: #fff;
+        border: 2px solid rgb(17, 179, 207);
+    }
+}

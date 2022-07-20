@@ -1,0 +1,60 @@
+/* Items at start */
+.foodCard {
+    height: auto;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 5px rgb(0 0 0 / 25%);
+    padding: 10px;
+}
+
+
+.foodImage {
+    height: 230px;
+    width: 100%;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    border-radius: 27px;
+    overflow: hidden;
+}
+
+.foodImage > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95px;
+}
+
+.foodName {
+    text-align: center;
+    font-size: 18px;
+}
+
+.showDescription {
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.23s;
+    justify-self: flex-end;
+}
+
+.showDescription:hover {
+    background-color: rgb(46, 192, 217);
+    border: 3px solid rgb(46, 192, 217);
+    color: #fff;
+}
+
+.showDescription:active {
+    height: calc(40px + 1px);
+    background-color: rgb(33, 126, 141);
+    border: 3px solid rgb(33, 126, 141);
+}
+

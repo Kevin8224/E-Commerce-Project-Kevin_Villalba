@@ -1,0 +1,130 @@
+/* Single item detail */
+.ItemDetail {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 385px;
+    width: 930px;
+    top: 40px;
+    margin: auto;
+    background-color: rgb(33,37,41);
+    box-shadow: 0px 3px 10px 12px rgba(74, 74, 74, 0.453);
+    padding: 1px 25px 15px 25px;
+    border-radius: 20px; 
+    overflow: hidden; 
+    z-index: 100;
+    box-sizing: content-box;
+}
+
+.ItemDetail::after{
+    content: '';
+    position: absolute;
+    height: 480px;
+    width: 580px;
+    background-color:rgb(2, 196, 244);
+    transform: translate(590px, -275px);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.ItemDetail::before {
+    content: '';
+    position: absolute;
+    height: 480px;
+    width: 580px;
+    background-color:rgb(2, 196, 244);
+    transform: translate(-300px, 345px);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: -1;
+    opacity: 0.5;
+}
+ 
+
+.descFoodImage {
+    height: 270px;
+    width: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.foodInfo {
+    color: #fff;
+    height: 250px;
+    width: 580px;
+    margin-left: 30px;
+}
+
+.price{
+    color: rgb(38, 226, 13);
+    font-size: 21px;
+    font-weight: 600;
+    margin-left: 5px;
+    letter-spacing: 0.2px;
+}
+
+.foodDesc{
+    margin-top: -7px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1040px){
+    .ItemDetail {
+        flex-direction: column;
+        height: 570px;
+        width: auto;
+        top: 20px;
+        padding: 20px 10px;
+    }
+
+    .ItemDetail::after{
+        transform: translate(460px, -275px);
+    }
+
+    .ItemDetail::before {
+        transform: translate(-450px, 410px);
+    }
+
+    .foodInfo {
+        margin-top: 6px;
+        margin-left: 0;
+        width: 96%;
+        overflow: auto;
+    }
+
+    .descFoodImage {
+        width: 400px;
+    }
+    
+    .descFoodName, .foodDesc, .price {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 560px ){
+    .ItemDetail {
+        left: 0;
+        right: 0;
+        width: 85%;
+    }
+
+    .ItemDetail::before{
+        transform: translate(-330px, 390px);
+    }
+
+    .ItemDetail::after {
+        transform: translate(380px, -275px);
+    }
+
+    .descFoodImage {
+        width: 100%;
+    }
+}

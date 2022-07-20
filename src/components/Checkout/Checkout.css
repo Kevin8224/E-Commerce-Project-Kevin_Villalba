@@ -1,0 +1,340 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,600);
+
+/* Variables to improve readability */
+:root {
+    --color__accent: #19b1bf;
+
+    --field__background: #f5f5f5;
+    --field__background--hover: #e9e9e9;
+    --input__border: rgba(0, 0, 0, 0.42);
+    --input__border--hover: rgba(0, 0, 0, 0.62);
+    --label__color: #222;
+
+    --font__size: 16px;
+    --font__family: Roboto, Arial, sans-serif;
+}
+
+input {
+    background: none;
+    border-width: 0;
+    display: block;
+    width: 100%;
+}
+
+/* Form */
+.form {
+    height: auto;
+    width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem 3rem 4rem;
+    box-shadow: 2px 2px 16px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+}
+
+/* Form inputs */
+.input-container {
+    margin-bottom: 2rem;
+    background-color: var(--field__background);
+    transition: background-color 0.2s ease;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.input-container:hover {
+    background-color: var(--field__background--hover);
+}
+
+.input-container:focus-within {
+    background-color: #fff;
+}
+
+.input {
+    padding: 1.3rem 1rem 0.6rem 0.6rem;
+    font-size: 1rem;
+    border-bottom: 0.15rem solid var(--input__border);
+    transition: border-color 0.2s ease;
+    caret-color: var(--color__accent);
+    border-radius: 5px 5px 1px 1px;
+    transition: outline 0.05s, border-radius 0s;
+}
+
+.input:focus {
+    outline: 0 0 2px 0 solid var(--color__accent);
+    border-radius: 5px 5px 0 0;
+}
+
+.input-container:hover .input {
+    border-color: var(--input__border--hover);
+}
+
+.input::placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+/* Form input Labels*/
+.label {
+    display: block;
+    position: relative;
+    max-height: 0;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.label::before {
+    color: var(--label__color);
+    content: attr(data-content);
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-origin: left top;
+    transition: transform 0.2s ease;
+    opacity: 0.8;
+    top: -0.18rem;
+    left: 0.85rem;
+    position: relative;
+}
+
+.label::after {
+    bottom: 1rem;
+    content: "";
+    height: 0.16rem;
+    position: absolute;
+   transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease; 
+    opacity: 0;
+    left: 0;
+    top: 100%;
+    margin-top: -0.12rem;
+    transform: scale3d(0, 1, 1);
+    width: 100%;
+    background-color: var(--color__accent);
+}
+
+.input:focus+.label::after {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+}
+
+.input:placeholder-shown + .label::before {
+    transform: translate3d(0, -2.3rem, 0) scale3d(1, 1, 1);
+}
+
+/* Move on focus*/
+.label::before,
+.input:focus+.label::before {
+    transform: translate3d(-0.27rem, -3.29rem, 0) scale3d(0.82, 0.82, 1);
+}
+
+.input:focus+.label::before {
+    color: var(--color__accent);
+}
+
+.hidden-visually {
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.checkout-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrong data when user press generate-checkout btn */
+.alert-wrong-data {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-size: 16px;
+    color: #f00;
+}
+
+/* Generate-checkout btn */
+.generate-checkout{
+    height: 52px;
+    width: 200px;
+    color: #fff;
+    background-color: #0fc5d5;
+    box-shadow: 0px 4px 10px 5px #00000025;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.07s;
+}
+
+.generate-checkout:hover{
+    background-color: #07dee9;
+}
+
+.generate-checkout:active{
+    background-color: #0998ab;
+}
+
+/* Order completed screen */
+.order-screen {
+    height: auto;
+    width: 450px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 18px 25px;
+    box-shadow: 2px 2px 16px 3px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+
+/* Details */
+.order-details {
+    opacity: 0;
+    transform: translate(70px, 0);
+    animation: fadeInDetails 0.65s ease-in forwards;
+}
+
+
+.btn-show-action {
+    height: 40px;
+    width: 180px;
+    background-color: rgb(24, 212, 84);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px 2px #00000030;
+    opacity: 0;
+    transform: translate(20px, 0);
+    color: #fff;
+    animation: fadeInBtn 0.25s ease-in-out forwards;
+    transition: all 0.08s;
+}
+
+.btn-show-action:hover {
+    background-color: rgb(21, 230, 146);
+}
+
+.btn-show-action:active {
+    background-color: rgb(21, 164, 13);
+}
+
+
+.btn-close-action {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 70px;
+    border: none;
+    color: #fff;
+    border-radius: 0 0 4px 8px;
+    background-color: rgb(255, 34, 34);
+    transition: all 0.2s;
+}
+
+.btn-close-action:hover {
+    box-shadow: -0.4px 1px 4px 2px rgba(255 102 102 / 50%);
+}
+
+.btn-close-action:active {
+    background-color: rgb(205, 26, 26);
+}
+
+.list-bought {
+    position: relative;
+    border-radius: 8px;
+    background-color: #222;
+    padding: 20px 15px 15px 15px;
+    transform: translate(0, 100px) scale(0.8);
+    opacity: 0;
+    overflow: hidden;
+    animation: fadeInList 0.45s ease-in-out forwards;
+}
+
+.list-bought ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+.products-bought {
+    color: #fff;
+    transform: translate(0, 0);
+}
+
+/* Animation */
+@keyframes fadeInList {
+    0% {
+        transform: translate(0, 100px) scale(0.8);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBtn {
+    0% {
+        transform: translate(20px, 0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDetails {
+    0% {
+        opacity: 0;
+        transform: translate(70px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 550px) {
+    .form {
+        width: 330px;
+        padding: 30px 20px;
+    }
+    
+    .input {
+        padding: 1.2rem 1rem 0.6rem 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .order-screen {
+        padding: 18px 18px;
+        width: 330px;
+    }
+
+    .btn-close-action {
+        width: 65px;
+    }
+
+    .list-bought {
+        padding: 35px 10px 15px 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .form {
+        width: 90%;
+    }
+}

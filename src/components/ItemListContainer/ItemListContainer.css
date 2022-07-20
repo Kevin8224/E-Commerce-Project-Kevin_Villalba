@@ -1,0 +1,18 @@
+
+body {
+    background-color: rgb(234, 234, 234);
+}
+
+/* All products container */
+/* Fast flex auto wrap */
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    gap: 50px 20px;
+    padding: 30px 6px;
+    overflow-y: auto;
+}
